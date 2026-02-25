@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeiroApp.MainPage">
+    <StackLayout BackgroundColor="Blue" Padding="10">
+
+        <StackLayout BackgroundColor="Yellow">
+            <Label Text="Olá Mundo" 
+                   BackgroundColor="Red"
+                   Margin="30"/>
+            <Label Text="Teste espaçamento interno" 
+                   BackgroundColor="Green"
+                   Padding="15"/>
+        </StackLayout>
+
+        <StackLayout Padding="15"
+                     BackgroundColor="White"
+                     Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Button Text="Button 1" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="2"
+                    Margin="10, 0"
+                    HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
