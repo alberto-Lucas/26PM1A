@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.MainPage">
+    <StackLayout Padding="20"
+                 VerticalOptions="StartAndExpand">
+        <Frame Padding="20"
+               CornerRadius="20"
+               BackgroundColor="DarkSlateGrey">
+            <StackLayout>
+                <Label Text="Login"
+                       FontSize="35"
+                       HorizontalTextAlignment="Center"/>
+
+                <!-- Similar ao /BR do HTML-->
+                <StackLayout Padding="30"/>
+
+                <Label Text="Usuário:"/>
+                <Entry Placeholder="Usuário"
+                       x:Name="txtUsuario"/>
+                
+                <StackLayout Padding="10"/>
+                
+                <Label Text="Senha:"/>
+                <Entry Placeholder="Senha"
+                       x:Name="txtSenha"
+                       IsPassword="True"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="ckbMostrarSenha"
+                              CheckedChanged="ckbMostrarSenha_Checked"/>
+                    <Label Text="Mostrar senha"
+                           VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Tapped="lblMostrarSenha_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                
+
+                <StackLayout Padding="15"/>
+
+                <Button Text="Entrar"
+                        FontSize="15"
+                        TextColor="White"
+                        Clicked="btnEntrar_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
