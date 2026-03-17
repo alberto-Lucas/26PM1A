@@ -6,5 +6,8 @@
     <StackLayout>
         <Button Text="Voltar"
                 Clicked="btnVoltar_Clicked"/>
+
+        <StackLayout Padding="10"/> <!--/BR-->
+        <Label x:Name="lblUsuario"/>
     </StackLayout>
 </ContentPage>

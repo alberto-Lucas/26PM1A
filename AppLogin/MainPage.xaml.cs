@@ -25,7 +25,14 @@
                 //resumindo, se receber um tipo de dado int
                 //ela se torna int, se string, se torna string
                 //e assim por diante
-                var 
+
+                //Iremos atribuir a instancia da singleton
+                //a variavel
+                var usuarioLogado = UsuarioLogado.Instancia;
+
+                //atribuir os valores aos atributos
+                //da classe sigleton
+                usuarioLogado.Login = txtUsuario.Text;
 
                 Application.Current.MainPage.
                     Navigation.PushAsync(new pgPrincipal());
