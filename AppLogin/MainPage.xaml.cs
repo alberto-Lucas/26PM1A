@@ -13,8 +13,23 @@
             string senha = txtSenha.Text;
 
             if (usuario == "admin" && senha == "admin")
+            {
+                //Com usuário e senha corretos
+                //Podemos adicionar o login
+                //na classe singleton
+
+                //Criar a variavel para acesso a singleton
+                //var significar uma variavel do tipo variant
+                //ou seja é uma variavel coringa
+                //ela sera do tipo de dados atribuido a ela
+                //resumindo, se receber um tipo de dado int
+                //ela se torna int, se string, se torna string
+                //e assim por diante
+                var 
+
                 Application.Current.MainPage.
                     Navigation.PushAsync(new pgPrincipal());
+            }
             else
                 //Similar ao MessageBox
                 //Titulo
