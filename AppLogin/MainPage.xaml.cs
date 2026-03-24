@@ -64,5 +64,11 @@
                 !ckbMostrarSenha.IsChecked;
 
         }
+
+        private void lblCadastro_Tapped(object sender, TappedEventArgs e)
+        {
+            Application.Current.MainPage.
+                Navigation.PushAsync(new pgCadastro());
+        }
     }
 }

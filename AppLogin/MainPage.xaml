@@ -45,6 +45,22 @@
                         FontSize="15"
                         TextColor="White"
                         Clicked="btnEntrar_Clicked"/>
+
+                <Label HorizontalOptions="Center"
+                       TextColor="White"
+                       Margin="0, 5">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Não possui uma conta? "/>
+                            <Span Text="Cadastre-se"
+                                  FontAttributes="Bold"
+                                  TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="lblCadastro_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </Frame>
     </StackLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.pgCadastro"
+             Title="pgCadastro">
+    <!--Usando componente ScrollView
+    para deixar a tela "scrollavel"-->
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Frame BackgroundColor="DarkSlateGrey"
+                   CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Cadastro"
+                           FontSize="25"
+                           HorizontalTextAlignment="Center"/>
+                    <StackLayout Padding="20"/>
+
+                    <Label Text="Nome:"/>
+                    <Entry Placeholder="Nome"
+                           x:Name="txtNome"/>
+                    <StackLayout Padding="10"/>
+
+                    <Label Text="Email:"/>
+                    <Entry Placeholder="Email"
+                           x:Name="txtEmail"/>
+                    <StackLayout Padding="10"/>
+
+                    <Label Text="Login:"/>
+                    <Entry Placeholder="Login"
+                           x:Name="txtLogin"/>
+                    <StackLayout Padding="10"/>
+
+                    <Label Text="Senha:"/>
+                    <Entry Placeholder="Senha"
+                           x:Name="txtSenha"
+                           IsPassword="True"/>
+                    <StackLayout Padding="10"/>
+
+                    <Label Text="Confirmar senha:"/>
+                    <Entry Placeholder="Confirmar senha"
+                           x:Name="txtConfirmarSenha"
+                           IsPassword="True"/>
+                    <StackLayout Padding="10"/>
+
+                    <Label Text="Data de nascimento:"/>
+                    <Entry Placeholder="Data de nascimento"
+                           x:Name="txtDataNascimento"/>
+                    <StackLayout Padding="10"/>
+
+                    <Button Text="Cadastrar"
+                            FontSize="15"
+                            TextColor="White"
+                            Clicked="btnCadastrar_Clicked"/>
+                </StackLayout>
+            </Frame>            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
