@@ -65,8 +65,7 @@
         //As propriedades que são os atributos
         //prop e presciona tab
         public string Login { get; set; }
-        //Ex: 
-        //public string Nome { get; set; }
+        public string Nome { get; set; }
 
         //Posso definir quantos atributos
         //forem nescessarios

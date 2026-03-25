@@ -9,10 +9,28 @@
 
         private void btnEntrar_Clicked(object sender, EventArgs e)
         {
+            //o Trim() é usado par remover caracteres
+            //vazio do inicio e do final da string
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
 
-            if (usuario == "admin" && senha == "admin")
+            //nescessario vaidar se os campos estão preenchidos
+
+            if (string.IsNullOrEmpty(usuario) ||
+                string.IsNullOrEmpty(senha))
+            { 
+                DisplayAlert(
+                    "Atenção!",
+                    "Preencha os dados de login.",
+                    "Ok");
+                return;
+            }
+
+            //chamada da classe singleton de cadastro
+            var cadastroSingleton = CadastroSingleton.Instancia;
+
+            if (usuario == cadastroSingleton.Login && 
+                senha == cadastroSingleton.Senha)
             {
                 //Com usuário e senha corretos
                 //Podemos adicionar o login
@@ -32,7 +50,8 @@
 
                 //atribuir os valores aos atributos
                 //da classe sigleton
-                usuarioLogado.Login = txtUsuario.Text;
+                usuarioLogado.Login = cadastroSingleton.Login;
+                usuarioLogado.Nome = cadastroSingleton.Nome;
 
                 Application.Current.MainPage.
                     Navigation.PushAsync(new pgPrincipal());

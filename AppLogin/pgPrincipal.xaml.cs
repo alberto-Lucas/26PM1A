@@ -15,14 +15,26 @@ public partial class pgPrincipal : ContentPage
         lblUsuario.Text =
 			"Olá " + usuarioLogado.Login +
 			", seja bem-vindo!";
-	}
 
-    private void btnVoltar_Clicked(object sender, EventArgs e)
+        //Agora vou carregar os dados cadastrados
+        //na classe cadastroSingleton
+
+        var cadastroUsuario = CadastroSingleton.Instancia;
+
+        //Preencher as labels com os dados
+
+        lblNome.Text = cadastroUsuario.Nome;
+        lblEmail.Text = cadastroUsuario.Email;
+        lblLogin.Text = cadastroUsuario.Login;
+        lblDtNascimento.Text = cadastroUsuario.DtNascimento;
+    }
+
+    private void lblVoltar_Tapped(object sender, TappedEventArgs e)
     {
-		//Aplicar o POP
-		//Remover a tela atual da PILHA
+        //Aplicar o POP
+        //Remover a tela atual da PILHA
 
-		Application.Current.MainPage.
-			Navigation.PopAsync();
+        Application.Current.MainPage.
+            Navigation.PopAsync();
     }
 }

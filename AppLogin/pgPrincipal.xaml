@@ -3,11 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppLogin.pgPrincipal"
              Title="pgPrincipal">
-    <StackLayout>
-        <Button Text="Voltar"
-                Clicked="btnVoltar_Clicked"/>
+    <StackLayout Padding="10">
+        <Label Text="Voltar"
+               TextDecorations="Underline"
+               TextColor="DeepSkyBlue">
+        <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="lblVoltar_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
 
-        <StackLayout Padding="10"/> <!--/BR-->
+        <StackLayout Padding="10"/>
+        <!--/BR-->
         <Label x:Name="lblUsuario"/>
+        <StackLayout Padding="10"/>
+
+        <StackLayout HorizontalOptions="Fill">
+            <Frame BackgroundColor="DarkSlateGrey">
+                <StackLayout>
+                    <Label Text="Dados"
+                           FontSize="25"
+                           HorizontalTextAlignment="Center"/>
+
+                    <StackLayout Padding="10"/>
+                    <Label Text="Nome:"/>
+                    <Label x:Name="lblNome"/>
+
+                    <StackLayout Padding="10"/>
+                    <Label Text="Email:"/>
+                    <Label x:Name="lblEmail"/>
+
+                    <StackLayout Padding="10"/>
+                    <Label Text="Login:"/>
+                    <Label x:Name="lblLogin"/>
+
+                    <StackLayout Padding="10"/>
+                    <Label Text="Data de nascimento:"/>
+                    <Label x:Name="lblDtNascimento"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
