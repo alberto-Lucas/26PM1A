@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppListView.MainPage">
+    <StackLayout Padding="10">
+        <!--Cadastro-->
+        <StackLayout>
+            <Label Text="Nome:"/>
+            <Entry x:Name="txtNome"
+                   Placeholder="João Silva"
+                   ClearButtonVisibility="WhileEditing"/>
+            <StackLayout Padding="5"/>
+            
+            <Label Text="CPF:"/>
+            <Entry x:Name="txtCPF"
+                   Placeholder="000.000.000-00"
+                   ClearButtonVisibility="WhileEditing"/>
+            <StackLayout Padding="5"/>
+
+            <Button Text="Adicionar a Lista"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="DarkSlateGrey"
+                    Clicked="btnAdicionar_Clicked"/>
+        </StackLayout>
+        
+        <!--Lista de Dados-->
+        <StackLayout>
+            <ListView x:Name="lsvDados">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--Aqui dentro é como sera exibido-->
+                            <!--Config da aparencias dos itens na lista-->
+                            <Frame CornerRadius="10"
+                                   Padding="10"
+                                   Margin="5"
+                                   BackgroundColor="#414142">
+                                <StackLayout>
+                                    <!--Binding serve vincular
+                                    a propriedade de maneira dinamica
+                                    com o código c#
+                                    
+                                    OBS: Os nome precisam estar identicos
+                                    qualquer diferença perderá o vinculo-->
+                                    <Label Text="{Binding Nome}"
+                                           FontSize="20"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding CPF}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>    
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
