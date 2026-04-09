@@ -47,6 +47,13 @@
                                            FontSize="20"
                                            FontAttributes="Bold"/>
                                     <Label Text="{Binding CPF}"/>
+
+                                    <Button Text="Apagar"
+                                            Clicked="btnApagar_Clicked"
+                                            CommandParameter="{Binding .}"/>
+                                    <!--o Binding ira enviar o registro 
+                                    para o código C# e o ponto(.) irá recuperar
+                                    o registro atual em manipulação-->
                                 </StackLayout>
                             </Frame>
                         </ViewCell>
