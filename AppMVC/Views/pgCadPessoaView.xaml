@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMVC.Views.pgCadPessoaView"
+             Title="pgCadPessoaView">
+    <StackLayout Padding="5">
+        <Button Text="Voltar"
+                Clicked="btnVoltar_Clicked"/>
+
+        <Label Text="Cadastro"
+               FontSize="26"
+               HorizontalTextAlignment="Center"/>
+        <StackLayout Padding="10"/>
+
+        <Label Text="Nome:"/>
+        <Entry x:Name="txtNome"/>
+        <StackLayout Padding="5"/>
+
+        <Label Text="CPF:"/>
+        <Entry x:Name="txtCPF"/>
+        <StackLayout Padding="5"/>
+
+        <Button Text="Adicionar Imagem"
+                Clicked="btnAdicionarImagem_Clicked"/>
+        
+        <Button Text="Remover Imagem"
+                Clicked="btnRemoverImagem_Clicked"
+                IsVisible="False"/>
+
+        <Image x:Name="imgCadastro"
+               MaximumHeightRequest="300"
+               MaximumWidthRequest="300"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <StackLayout Padding="5"/>
+
+        <Button Text="Salvar Cadastro"
+                Clicked="btnSalvar_Clicked"/>
+
+    </StackLayout>
+</ContentPage>
