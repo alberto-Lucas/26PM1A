@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMVC.Views.pgVisualizarPessoa"
              Title="pgVisualizarPessoa">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout Padding="10">
+        <Button Text="Voltar"
+                Clicked="btnVoltar_Clicked"/>
+
+        <Label Text="Visualizar"
+               FontSize="26"
+               HorizontalTextAlignment="Center"/>
+        <StackLayout Padding="10"/>
+
+        <Label Text="Id:"/>
+        <Label x:Name="lblId"/>
+        <StackLayout Padding="5"/>
+
+        <Label Text="Nome:"/>
+        <Label x:Name="lblNome"/>
+        <StackLayout Padding="5"/>
+
+        <Label Text="CPF:"/>
+        <Label x:Name="lblCPF"/>
+        <StackLayout Padding="5"/>
+
+        <Image x:Name="imgCadastro"
+               MaximumHeightRequest="300"
+               MaximumWidthRequest="300"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+    </StackLayout>
 </ContentPage>

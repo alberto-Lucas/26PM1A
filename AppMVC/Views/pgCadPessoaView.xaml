@@ -25,7 +25,8 @@
         
         <Button Text="Remover Imagem"
                 Clicked="btnRemoverImagem_Clicked"
-                IsVisible="False"/>
+                IsVisible="False"
+                x:Name="btnRemoverImagem"/>
 
         <Image x:Name="imgCadastro"
                MaximumHeightRequest="300"
